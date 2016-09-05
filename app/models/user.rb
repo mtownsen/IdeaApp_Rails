@@ -6,4 +6,7 @@ class User < ApplicationRecord
          :token_authenticatable 
 
   has_many :authentication_tokens 
+  belongs_to :organization
+
+  accepts_nested_attributes_for :organization
 end
